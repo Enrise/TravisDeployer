@@ -3,7 +3,7 @@
 
 
 Combine [Deployer](http://deployer.org/) with [Travis-CI](https://travis-ci.org/) to automatically deploy
-when a branch gets merged.
+after a branch is merged and the build passes.
 
 ## Setup
 
@@ -20,14 +20,14 @@ First of all, we expect you to have the following ready:
 1. Add TravisDeployer to your project using composer running: `composer require enrise/travisdeployer`
 1. Add the following code to your `.travis.yml`:
 ```yml
-deployer: # our deployer config
-    verbose: false # verbose output the deployment?
-    branches: # what branches do you want to deploy?
-        develop: develop # deploys stage develop when merging into develop
-        master: production # deploys stage production when merging into master
+deployer:     # our deployer config
+    verbose: false     # verbose output the deployment?
+    branches:     # what branches do you want to deploy?
+        develop: develop     # deploys stage develop when merging into develop
+        master: production     # deploys stage production when merging into master
 
-after_success: # after your build succeeded (tests passed)
-    - php vendor/enrise/travisdeployer/deploy.php # Trigger the travis deployer
+after_success:     # after your build succeeded (tests passed)
+    - php vendor/enrise/travisdeployer/deploy.php     # Trigger the travis deployer
 ```
 You can customise the branches and if you want to deploy verbose or not.
 
@@ -43,7 +43,7 @@ script is triggered. This script will deploy when:
 If all criteria are matched, deployer will be download to your build, and will deploy your code onto your server.
 What happens there is what you configured in your projects root `deploy.php` (the Deployer config).
 
------
+===
 
 TravisDeployer is brought to you by [Rick van der Staaij](https://github.com/RickvdStaaij) and
 [Stefan van Essen](https://github.com/eXistenZNL).

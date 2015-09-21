@@ -1,4 +1,11 @@
 <?php
+/**
+ * TravisDeployer
+ *
+ * @link      https://github.com/Enrise/TravisDeployer for the canonical source repository
+ * @copyright Copyright (c) 2015 Enrise BV
+ * @license   https://github.com/Enrise/TravisDeployer/blob/master/LICENSE GNU v3 License
+ */
 namespace Enrise\TravisDeployer;
 
 use Symfony\Component\Yaml\Parser;

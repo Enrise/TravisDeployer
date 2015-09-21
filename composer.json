@@ -29,10 +29,5 @@
         "psr-4": {
             "Enrise\\TravisDeployer\\": "src/"
         }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "2.0-dev"
-        }
     }
 }

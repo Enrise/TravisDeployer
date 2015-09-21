@@ -7,8 +7,6 @@
 Combine [Deployer](http://deployer.org/) with [Travis-CI](https://travis-ci.org/) to automatically deploy
 after a branch is merged and the build passes.
 
-## Setup
-
 ### Expectations
 
 First of all, we expect you to have the following ready:

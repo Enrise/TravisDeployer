@@ -8,7 +8,7 @@
  */
 use Enrise\TravisDeployer\TravisDeployer;
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/../../autoload.php';
 
 $deployer = new TravisDeployer();
 $deployer->deploy();

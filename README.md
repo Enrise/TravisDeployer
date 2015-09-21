@@ -20,13 +20,13 @@ First of all, we expect you to have the following ready:
 1. Add TravisDeployer to your project using composer running: `composer require enrise/travisdeployer`
 1. Add the following code to your `.travis.yml`:
 ```yml
-deployer:     # our deployer config
-    verbose: false     # verbose output the deployment?
-    branches:     # what branches do you want to deploy?
-        develop: develop     # deploys stage develop when merging into develop
+deployer:                      # our deployer config
+    verbose: false             # verbose output the deployment?
+    branches:                  # what branches do you want to deploy?
+        develop: develop       # deploys stage develop when merging into develop
         master: production     # deploys stage production when merging into master
 
-after_success:     # after your build succeeded (tests passed)
+after_success:                 # after your build succeeded (tests passed)
     - php vendor/enrise/travisdeployer/deploy.php     # Trigger the travis deployer
 ```
 You can customise the branches and if you want to deploy verbose or not.

@@ -33,15 +33,15 @@ You can customise the branches and if you want to deploy verbose or not.
 
 ### Deploying
 
-Now every time you push some code into your branches and the travis-ci build succeeds, the TravisDeployer deploy
+Now every time you push code into your branches and the travis-ci build succeeds, the TravisDeployer deploy
 script is triggered. This script will deploy when:
 
 * The build is green
-* The build is NOT an PR
-* The branch pushed to is in the branches list provided in the travis config
+* The build is NOT a PR
+* The branch pushed to is in the branches list (provided in the travis config)
 
-If all criteria are matched, deployer will be download to your build, and will deploy your code onto your server.
-What happens there is what you configured in your projects root `deploy.php` (the Deployer config).
+If all criteria are matched, deployer will be downloaded to your build, and will deploy your code to your server.
+What happens during the deployment is what you configured in your projects root `deploy.php` (the Deployer config).
 
 ===
 

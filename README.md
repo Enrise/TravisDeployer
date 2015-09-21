@@ -1,6 +1,8 @@
 # TravisDeployer
 
-
+[![Travis-CI](https://img.shields.io/travis/Enrise/TravisDeployer/master.svg)](https://travis-ci.org/Enrise/TravisDeployer)
+[![Packagist](https://img.shields.io/packagist/v/enrise/travisdeployer.svg)](https://packagist.org/packages/enrise/travisdeployer)
+[![Packagist downloads](https://img.shields.io/packagist/dt/enrise/travisdeployer.svg)](https://packagist.org/packages/enrise/travisdeployer)
 
 Combine [Deployer](http://deployer.org/) with [Travis-CI](https://travis-ci.org/) to automatically deploy
 after a branch is merged and the build passes.

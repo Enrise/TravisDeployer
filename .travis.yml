@@ -1,0 +1,19 @@
+language: php
+
+sudo: false
+
+matrix:
+    include:
+        - php: 5.6
+
+before_install:
+    - composer self-update
+
+install:
+    - composer install --prefer-dist --no-interaction
+
+before_script:
+    - phpenv rehash
+
+script:
+    - vendor/bin/phpcs -n --standard=PSR2 --extensions=php --ignore=vendor/* *

@@ -1,31 +1,14 @@
 #!/usr/bin/env php
 <?php
-/**
- * TravisDeployer
- *
- * @link      https://github.com/Enrise/TravisDeployer for the canonical source repository
- * @copyright Copyright (c) 2015 Enrise BV
- * @license   https://github.com/Enrise/TravisDeployer/blob/master/LICENSE GNU v3 License
- */
-use Enrise\TravisDeployer\TravisDeployer;
 
-foreach ([__DIR__ . '/../../../autoload.php', __DIR__ . '/../../vendor/autoload.php', __DIR__ . '/../vendor/autoload.php'] as $file) {
-    if (file_exists($file)) {
-        define('TRAVISDEPLOYER_COMPOSER_INSTALL', $file);
+$autoloaders = [__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoload.php'];
+
+foreach ($autoloaders as $autoloader) {
+    if (is_file($autoloader)) {
+        require_once $autoloader;
         break;
     }
 }
 
-unset($file);
-
-if (!defined('TRAVISDEPLOYER_COMPOSER_INSTALL')) {
-    echo 'You need to set up the project dependencies using the following commands:' . PHP_EOL
-        . 'wget http://getcomposer.org/composer.phar' . PHP_EOL
-        . 'php composer.phar install' . PHP_EOL;
-    die(1);
-}
-
-require TRAVISDEPLOYER_COMPOSER_INSTALL;
-
-$deployer = new TravisDeployer();
+$deployer = new Enrise\TravisDeployer\TravisDeployer();
 $deployer->deploy();

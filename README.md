@@ -1,6 +1,6 @@
 # TravisDeployer
 
-[![Travis-CI](https://img.shields.io/travis/Enrise/TravisDeployer/master.svg)](https://travis-ci.org/Enrise/TravisDeployer)
+[![Travis-CI](https://api.travis-ci.org/Enrise/TravisDeployer.svg?branch=master)](https://travis-ci.org/Enrise/TravisDeployer)
 [![Packagist](https://img.shields.io/packagist/v/enrise/travisdeployer.svg)](https://packagist.org/packages/enrise/travisdeployer)
 [![Packagist downloads](https://img.shields.io/packagist/dt/enrise/travisdeployer.svg)](https://packagist.org/packages/enrise/travisdeployer)
 

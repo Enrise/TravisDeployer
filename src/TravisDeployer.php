@@ -40,7 +40,7 @@ class TravisDeployer
         $configFile = getenv('TRAVIS_BUILD_DIR') . '/.travis.yml';
 
         $config = $yaml->parse(file_get_contents($configFile));
-        $config = $config['deployer'];
+        $config = $config['travisdeployer'];
 
         $this->branches = $config['branches'];
         if (count($this->branches) === 0) {

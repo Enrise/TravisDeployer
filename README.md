@@ -1,6 +1,6 @@
 # TravisDeployer
 
-[![Travis-CI](https://img.shields.io/travis/Enrise/TravisDeployer/master.svg)](https://travis-ci.org/Enrise/TravisDeployer)
+[![Travis-CI](https://api.travis-ci.org/Enrise/TravisDeployer.svg?branch=master)](https://travis-ci.org/Enrise/TravisDeployer)
 [![Packagist](https://img.shields.io/packagist/v/enrise/travisdeployer.svg)](https://packagist.org/packages/enrise/travisdeployer)
 [![Packagist downloads](https://img.shields.io/packagist/dt/enrise/travisdeployer.svg)](https://packagist.org/packages/enrise/travisdeployer)
 
@@ -20,14 +20,14 @@ First of all, we expect you to have the following ready:
 1. Add TravisDeployer to your project using composer running: `composer require enrise/travisdeployer`
 1. Add the following code to your `.travis.yml`:
 ```yml
-deployer:                      # our deployer config
-    verbose: false             # verbose output the deployment?
-    branches:                  # what branches do you want to deploy?
-        develop: develop       # deploys stage develop when merging into develop
-        master: production     # deploys stage production when merging into master
+travisdeployer:                  # our deployer config
+    verbose: false               # verbose output the deployment?
+    branches:                    # what branches do you want to deploy?
+        develop: develop         # deploys stage develop when merging into develop
+        master: production       # deploys stage production when merging into master
 
-after_success:                 # after your build succeeded (tests passed)
-    - php vendor/enrise/travisdeployer/deploy.php     # Trigger the travis deployer
+after_success:                   # after your build succeeded (tests passed)
+    - vendor/bin/travisdeployer  # Trigger the travis deployer
 ```
 You can customise the branches and if you want to deploy verbose or not.
 

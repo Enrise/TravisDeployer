@@ -5,6 +5,7 @@
     "keywords": ["travis", "deployer", "travis-ci"],
     "homepage": "https://github.com/Enrise/TravisDeployer",
     "license" : "GNU v3",
+    "minimum-stability": "stable",
     "authors" : [
         {
             "name": "Rick van der Staaij",
@@ -19,7 +20,7 @@
     ],
     "require": {
         "php": ">=5.4",
-        "symfony/yaml": "^2.7"
+        "symfony/yaml": "^2.7|^3.0"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "2.*"
